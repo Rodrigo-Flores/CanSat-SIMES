@@ -39,31 +39,32 @@ def calculator():
 
 	again = "n"
 
-	menu()
-
 	try:
 		option, number_1, number_2 = menu()
 	except ValueError:
 		option = menu()
 
-	if option == "1":
-		print(addition(number_1, number_2))
-	elif option == "2":
-		print(subtraction(number_1, number_2))
-	elif option == "3":
-		print(multiplication(number_1, number_2))
-	elif option == "4":
-		print(division(number_1, number_2))
-	elif option == "5":
-		return again == "n"
-	else:
-		print("Ups! Plase, try again...")
-		calculator()
+	try:
+		if option == "1":
+			print(addition(number_1, number_2))
+		elif option == "2":
+			print(subtraction(number_1, number_2))
+		elif option == "3":
+			print(multiplication(number_1, number_2))
+		elif option == "4":
+			print(division(number_1, number_2))
+		elif option == "5":
+			return again == "n"
+		else:
+			print("\nUps! Plase, try again...")
+			calculator()
 
-	if option == "1" or "2" or "3" or "4":
-		again = input("Do you wanna try again? (y/n): ")
-		print("\n")
-		return again
+		if option == ("1" or "2" or "3" or "4"):
+			again = input("Do you wanna try again? (y/n): ")
+			print("\n")
+			return again
+	except ValueError:
+		print("\nUps! Nothing happends. Are you sure that your numbers are rigth? Try Again...\n")
 
 calculator()
 again = calculator()

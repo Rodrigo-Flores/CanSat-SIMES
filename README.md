@@ -5,6 +5,6 @@ The aplication have four differents options:
   - Addition.
   - Subtraction.
   - Multiplication.
-  - Divition.
-  
+  - Division.
+
 I'll, in the future, make upgrade the App, adding more functions and a cool interface.
