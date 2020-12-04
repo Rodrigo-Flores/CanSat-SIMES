@@ -42,7 +42,7 @@ def calculator():
 	try:
 		option, number_1, number_2 = menu()
 	except ValueError:
-		option = menu()
+		option = "5"
 
 	try:
 		if option == "1":
@@ -55,22 +55,26 @@ def calculator():
 			print(division(number_1, number_2))
 		elif option == "5":
 			return again == "n"
-		else:
-			print("\nUps! Plase, try again...")
+		elif option != ("1" or "2" or "3" or "4" or "5"):
+			print("\nUps! That is not an option. Plase, try again...\n")
 			calculator()
 
-		if option == ("1" or "2" or "3" or "4"):
-			again = input("Do you wanna try again? (y/n): ")
-			print("\n")
-			return again
+		for i in range(1,5):
+			if option == str(i):
+				again = input("Do you wanna try again? (y/n): ")
+				print("\n")
+				return again
+				break
+			else:
+				return again
+
 	except ValueError:
 		print("\nUps! Nothing happends. Are you sure that your numbers are rigth? Try Again...\n")
 
-calculator()
 again = calculator()
 
 while again == ("y" or "Y"):
 	calculator()
 
-print("Thanks for use the Minimal Calculator!")
-input("Type any key and press Enter to continue... ")
+print("\n\t\t\tThanks for use the Minimal Calculator!")
+input("\nType any key and press Enter to continue... ")
