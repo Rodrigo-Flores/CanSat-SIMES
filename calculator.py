@@ -18,21 +18,24 @@ def menu():
 	return option
 
 #Program's Utilities
-def addition(number_1, number_2):
-	plus = float(number_1) + float(number_2)
-	return plus
 
-def subtraction(number_1, number_2):
-	minus = float(number_1) - float(number_2)
-	return minus
+class operator():
 
-def multiplication(number_1, number_2):
-	times = float(number_1) * float(number_2)
-	return times
+	def addition(number_1, number_2):
+		plus = float(number_1) + float(number_2)
+		return plus
 
-def division(number_1, number_2):
-	divided = float (number_1) / float(number_2)
-	return divided
+	def subtraction(number_1, number_2):
+		minus = float(number_1) - float(number_2)
+		return minus
+
+	def multiplication(number_1, number_2):
+		times = float(number_1) * float(number_2)
+		return times
+
+	def division(number_1, number_2):
+		divided = float (number_1) / float(number_2)
+		return divided
 
 #Main program
 def calculator():
