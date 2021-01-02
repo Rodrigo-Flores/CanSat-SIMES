@@ -1,5 +1,2 @@
-/*
-window.alert("WARNING")
-*/
-let variable = prompt('Type  something: ')
-console.log(variable)
+let current_time = Date()
+alert('Actually is: ' + current_time)
