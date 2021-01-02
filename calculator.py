@@ -19,7 +19,7 @@ def menu():
 
 #Program's Utilities
 
-class operator():
+class operator(): # Pendient to apply changes
 
 	def addition(number_1, number_2):
 		plus = float(number_1) + float(number_2)
